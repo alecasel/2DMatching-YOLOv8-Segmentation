@@ -1,0 +1,46 @@
+CAMERA_ID: DEV_1AB22C01712C
+EXPOSURE: 50000
+GAIN: 1
+GAMMA: 1
+SATURATION: 1
+SHARPNESS: 4
+
+SUBJECT: brake_caliper  # brake_caliper  carcassa
+
+EXECUTION: nd  # labelme  labelme2yolo  train  test  2dmatching
+PREDICT_CONFIDENCE: 0.03  # 0.02  0.014
+
+DETECTOR: ORB  # ORB  SIFT
+MATCHER: BRUTE-FORCE  # BRUTE-FORCE  FLANN
+FEATURES: 5000
+
+# This size is used for YOLO predict
+YOLO_IMGSZ: 640  # 640  1024  1280
+
+DO_TEMPLATE_RESIZE: True  # True  False
+# Resize dimensions for template and frame, the masks are created with these dimensions
+RSZ_WIDTH: 1024  # 2064  1280  1024  640
+RSZ_HEIGHT: 768  # 1544  958  768  480
+
+
+DO_IMG_PROCESSING: True  # True  False
+SHOW_IMG_PROCESSING: False  # True  False
+SELECT_BB_TO_ALIGN: False  # True  False
+
+
+DATASET_YAML_FILE: YOLODataset\dataset.yaml
+
+TEMPLATE_IMG: pinza1.png
+IMG_TEMPLATE_PATH: results\predict\no_back
+2D_MATCHING_PATH: results\2d_matching
+
+DATA_FOLDER_NAME: data
+MASK_FOLDER_NAME: mask
+NO_BACK_FOLDER_NAME: no_back
+RESIZED_FOLDER_NAME: resized
+NO_BACK_BB_FOLDER_NAME: no_back_bb
+
+PRJ_PATH: C:\Users\GEFIT\Desktop\Workspace\08-ROTOTRANSLATION\rototranslation\rototranslation
+BEST_WEIGHTS_PATH: weights\best.pt
+TEST_RSLT_PATH: results\predict
+TRAIN_RSLT_PATH: results\train

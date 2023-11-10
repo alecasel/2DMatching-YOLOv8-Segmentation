@@ -1,0 +1,5 @@
+train: data\brake_caliper\YOLODataset/images/train/
+val: data\brake_caliper\YOLODataset/images/val/
+test: data\brake_caliper\YOLODataset/images/test/
+nc: 1
+names: ['caliper']
